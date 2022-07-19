@@ -1,2 +1,2 @@
 # nadafa
-NADAFA - Cleaning Service Website  Using HTML CSS &amp; JavaScript 
+NADAFA - Cleaning Service Website  Using HTML CSS &amp; JavaScript | Responsive
