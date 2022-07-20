@@ -34,6 +34,22 @@
 }
 
 
+/************ Override variables for dark theme *************/
+
+body.t-dark {
+    /************ Text Colors *************/
+    --text-x-dark-gray: hsl(0, 0%, 94%);
+    --text-dark-gray: hsl(0, 0%, 84%);
+    /************ bg Colors *************/
+    --body-bg-color: hsl(var(--hue), 20%, 10%);
+    --bg-body: hsl(var(--hue), 13%, 17%);
+    /************ Border Colors *************/
+    --border-color: hsl(var(--hue), 15%, 30%);
+    /************ shadow Colors *************/
+    --shadow: 0 0 10px hsla(var(--hue), 19%, 7%, 0.9);
+}
+
+
 /************ base *************/
 
 html {

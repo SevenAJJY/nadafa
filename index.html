@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style-switcher.css" />
     <link rel="stylesheet" href="./css/all.min.css" />
     <title>Cleaning Service</title>
 </head>
@@ -301,11 +302,35 @@
 
     </div>
     <!-- Page wrapper end -->
-
+    <!-- Style switcher Start -->
+    <div class="style-switcher js-style-switcher">
+        <button type="button" class="style-switcher-toggler js-style-switcher-toggler">
+            <i class="fa-solid fa-gear"></i>
+        </button>
+        <div class="style-switcher-main">
+            <h2>Style switcher</h2>
+            <div class="style-switcher-item">
+                <p>Theme color</p>
+                <div class="theme-color">
+                    <input type="range" min="0" max="360" class="hue-slider js-hue-slider" />
+                    <div class="hue">Hue: <span class="js-hue"></span></div>
+                </div>
+            </div>
+            <div class="style-switcher-item">
+                <label class="form-switch">
+                    <span>Dark Mode</span>
+                    <input type="checkbox" class="js-dark-mode">
+                    <div class="box"></div>
+                </label>
+            </div>
+        </div>
+    </div>
+    <!-- Style switcher end -->
 
 
 
     <script src="./js/main.js"></script>
+    <script src="./js/style-switcher.js"></script>
 </body>
 
 </html>

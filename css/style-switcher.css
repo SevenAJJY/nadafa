@@ -1,0 +1,165 @@
+:root {
+    --hue: 200;
+    --satueation: 70%;
+    --lightness: 55%;
+    --main-color: hsl(var(--hue), var(--satueation), var(--lightness));
+    /************ Text Colors *************/
+    --text-white: hsl(0, 0%, 100%);
+    --text-light-gray: hsl(0, 0%, 96%);
+    --text-x-dark-gray: hsl(0, 0%, 10%);
+    --text-dark-gray: hsl(0, 0%, 20%);
+    /************ bg Colors *************/
+    --body-bg-color: hsl(var(--hue), 60%, 94%);
+    --bg-body: hsl(var(--hue), 60%, 96%);
+    --bg-white: hsl(0, 0%, 100%);
+    /************ Border Colors *************/
+    --border-color: hsl(var(--hue), 48%, 80%);
+    /************ shadow Colors *************/
+    --shadow: 0 0 10px hsla(var(--hue), 57%, 63%, 0.3);
+    --focus-shadow: 0 0 10px hsla(var(--hue), 57%, 63%, 0.6);
+    /************ font size *************/
+    --fs-4xl: 50px;
+    --fs-3xl: 35px;
+    --fs-2xl: 26px;
+    --fs-1xl: 20px;
+    --fs-lg: 18px;
+    --fs-md: 16px;
+    --fs-sm: 14px;
+}
+
+.style-switcher {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 280px;
+    height: 100%;
+    box-shadow: var(--shadow);
+    transform: translateX(100%);
+    transition: all .3s ease;
+}
+
+.style-switcher.open {
+    transform: translateX(0%);
+}
+
+.style-switcher-toggler {
+    height: 40px;
+    width: 40px;
+    background-color: var(--main-color);
+    color: var(--text-white);
+    font-size: var(--fs-md);
+    position: absolute;
+    left: -40px;
+    top: 28%;
+    border-radius: 8px 0 0 8px;
+    border: none;
+}
+
+.style-switcher-main {
+    height: 100%;
+    background-color: var(--bg-body);
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.style-switcher h2 {
+    text-transform: capitalize;
+    font-size: var(--fs-1xl);
+    font-weight: 500;
+    padding: 0 0 10px;
+}
+
+.style-switcher-item {
+    padding: 15px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.style-switcher-item p {
+    margin-bottom: 10px;
+}
+
+.hue-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    outline: none;
+    height: 12px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background: linear-gradient(to right, hsl(0, var(--satueation), var(--lightness)), hsl(30, var(--satueation), var(--lightness)), hsl(60, var(--satueation), var(--lightness)), hsl(90, var(--satueation), var(--lightness)), hsl(120, var(--satueation), var(--lightness)), hsl(150, var(--satueation), var(--lightness)), hsl(180, var(--satueation), var(--lightness)), hsl(210, var(--satueation), var(--lightness)), hsl(240, var(--satueation), var(--lightness)), hsl(270, var(--satueation), var(--lightness)), hsl(300, var(--satueation), var(--lightness)), hsl(330, var(--satueation), var(--lightness)), hsl(360, var(--satueation), var(--lightness)));
+}
+
+.hue-slider:focus {
+    box-shadow: var(--shadow);
+}
+
+.hue-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-white);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.hue-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-white);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.hue-slider::-webkit-slider-thumb:hover,
+.hue-slider::-moz-range-thumb:hover {
+    opacity: 0.8;
+}
+
+.form-switch {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.form-switch input {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.form-switch .box {
+    height: 24px;
+    width: 44px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    position: relative;
+    transition: all .5s ease;
+}
+
+.form-switch .box::before {
+    content: "";
+    height: 14px;
+    width: 14px;
+    border: 1px solid var(--border-color);
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+
+.form-switch input:checked+.box {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.form-switch input:focus+.box {
+    box-shadow: var(--shadow);
+}
+
+.form-switch input:checked+.box::before {
+    transform: translateX(calc(100% + 6px));
+    background-color: var(--bg-white);
+    border-color: transparent;
+}
