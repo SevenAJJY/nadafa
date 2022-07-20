@@ -1,3 +1,8 @@
+/************  animate on scroll *************/
+window.addEventListener('load', () => {
+    AOS.init();
+});
+
 /************  Header bg Reveal *************/
 
 const headerBg = () => {
