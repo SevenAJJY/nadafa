@@ -62,7 +62,7 @@
 }
 
 .hue-slider:focus {
-    box-shadow: var(--shadow);
+    box-shadow: var(--focus-shadow);
 }
 
 .hue-slider::-webkit-slider-thumb {
