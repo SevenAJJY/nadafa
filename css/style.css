@@ -128,6 +128,10 @@ img {
 
 /************ Start Section Buttons *************/
 
+button {
+    cursor: pointer;
+}
+
 .btn {
     display: inline-block;
     padding: 10px 28px;
@@ -211,6 +215,45 @@ img {
     margin: auto;
     padding: 15px;
 }
+
+
+/************ Start Forms  *************/
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+::placeholder {
+    color: var(--text-x-dark-gray);
+    opacity: 1;
+}
+
+.input-control {
+    height: 50px;
+    width: 100%;
+    border-radius: 25px;
+    border: 1px solid var(--border-color);
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    color: var(--text-x-dark-gray);
+    padding: 0 20px;
+    background: transparent;
+}
+
+.input-control:focus {
+    outline: 1px solid var(--border-color);
+}
+
+textarea.input-control {
+    display: block;
+    height: 150px;
+    padding-top: 15px;
+    resize: none;
+}
+
+
+/************ End Forms  *************/
 
 
 /************ Start Section Header *************/
@@ -355,6 +398,7 @@ img {
 .about-img,
 .about-text {
     grid-column: span 6;
+    align-self: center;
 }
 
 .about-img .img-box {
@@ -572,3 +616,101 @@ img {
 
 
 /************  End Section team *************/
+
+
+/************  Start Section Contact *************/
+
+.contact-grid {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.contact-info {
+    grid-column: span 5;
+}
+
+.contact-form {
+    grid-column: span 7;
+}
+
+.contact-info-item {
+    position: relative;
+    padding: 20px 0 20px 70px;
+}
+
+.contact-info-item+.contact-info-item {
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.contact-info-item i {
+    height: 50px;
+    width: 50px;
+    background-color: var(--bg-body);
+    box-shadow: var(--shadow);
+    color: var(--main-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+.contact-info-item h3 {
+    margin: 0 0 10px;
+    font-size: var(--fs-1xl);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.contact-info-item p:last-child {
+    margin: 0;
+}
+
+
+/************  End Section Contact *************/
+
+
+/************  Start Section footer *************/
+
+.footer {
+    padding: 50px 0;
+    background-color: var(--main-color);
+    text-align: center;
+}
+
+.footer h3 {
+    color: var(--text-white);
+    font-size: var(--fs-2xl);
+    margin: 0 0 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.footer .social-links a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    background-color: var(--bg-white);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+    border: 1px solid transparent;
+    transition: all .5s ease;
+}
+
+.footer .social-links a:hover {
+    background-color: transparent;
+    color: var(--text-white);
+    border-color: initial;
+}
+
+.footer .social-links a:hover i {
+    transform: scale(1.5);
+}
+
+
+/************  End Section footer *************/
